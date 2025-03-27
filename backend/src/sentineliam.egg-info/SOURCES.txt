@@ -1,3 +1,4 @@
+README.md
 pyproject.toml
 src/cli/main.py
 src/engine/audit.py
@@ -12,5 +13,7 @@ src/sentineliam.egg-info/requires.txt
 src/sentineliam.egg-info/top_level.txt
 src/supabase_client/client.py
 src/supabase_client/templates.py
+tests/test_audit.py
+tests/test_cli.py
 tests/test_renderer.py
 tests/test_validator.py

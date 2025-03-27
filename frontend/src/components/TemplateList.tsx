@@ -1,4 +1,5 @@
 type Template = {
+    created_at: string | number | Date;
     name: string;
     created: string;
   };
@@ -22,8 +23,9 @@ type Template = {
             >
               <div className="font-medium">{t.name}</div>
               <div className="text-xs text-muted-foreground">
-                Created: {t.created}
-              </div>
+  Created: {new Date(t.created_at).toLocaleDateString()}
+</div>
+
             </li>
           ))}
         </ul>
