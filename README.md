@@ -173,6 +173,7 @@ CLI system design & infra assisted by Patch (AI dev assistant)
 - [ ] Sentinel Sync CLI for offline logs
 
 ---
+[![codecov](https://codecov.io/gh/KatrinaFinney/sentineliam/graph/badge.svg?token=CJ3180M4H5)](https://codecov.io/gh/KatrinaFinney/sentineliam)
 
 ## 📜 License
 
