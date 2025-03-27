@@ -1,8 +1,13 @@
-from jinja2 import Environment, FileSystemLoader
-import os
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+from pathlib import Path
 
-env = Environment(loader=FileSystemLoader("templates"))
+TEMPLATE_DIR = Path(__file__).parent.parent / "templates"
 
-def render_template(name: str, params: dict) -> str:
-    template = env.get_template(f"{name}.j2")
+env = Environment(
+    loader=FileSystemLoader(TEMPLATE_DIR),
+    autoescape=select_autoescape()
+)
+
+def render_template(template_name: str, params: dict) -> str:
+    template = env.get_template(f"{template_name}.j2")
     return template.render(**params)
