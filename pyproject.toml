@@ -1,0 +1,27 @@
+[project]
+name = "sentinel"
+version = "0.1.0"
+description = "SentinelIAM CLI for policy generation, validation, and audit"
+authors = [{ name = "Katrina", email = "you@example.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "typer[all]",
+    "pydantic",
+    "jinja2",
+    "pyyaml",
+    "python-dotenv",
+    "supabase"
+]
+
+[project.scripts]
+sentinel = "cli.main:app"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["cli", "engine", "supabase_client"]
